@@ -1,0 +1,15 @@
+{
+  "name": "filtero",
+  "version": "1.0.0",
+  "description": "Filter an object by its keys or values.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "object",
+    "filter"
+  ],
+  "author": "Robin <almigod0718@gmail.com>",
+  "license": "MIT"
+}
