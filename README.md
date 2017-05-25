@@ -8,7 +8,7 @@ npm i filtero -S
 ```
 
 ## Usage
-```
+```javascript
 import filtero from 'filtero'
 
 let obj = {
