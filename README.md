@@ -11,11 +11,12 @@ npm i filtero -S
 ```javascript
 filtero(obj, compareFunction)
 ```
+
 ### obj
 Target object to be filtered
+
 ### compareFuntion
 A function that defines the filtering rule. It will have **key** and **value** as parameters while iterating the object. If the function returns a truthy value. The current key/value pair will be reserved in the returning object, and vice versa.
-
 
 ## Usage
 ```javascript
