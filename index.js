@@ -8,9 +8,10 @@ module.exports = function (obj, rules) {
   }
 
   return Object.keys(obj)
-    .filter(function (key) { return rules(key, obj[key]) })
     .reduce(function (res, key) {
-      res[key] = obj[key]
+      if (rules(key, obj[key])) {
+        res[key] = obj[key]
+      }
       return res
     }, {})
 }
