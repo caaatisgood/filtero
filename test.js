@@ -21,13 +21,19 @@ test('should return empty object', function () {
   expect(filtero(obj, function () {})).toMatchObject({})
 })
 
-test('should throw an error', function () {
+test('should throw an error when passing an invalid type of argument as target', function () {
   expect(function () {
     filtero([], function () {})
   }).toThrowError()
 })
 
-test('should throw an error', function () {
+test('should throw an error when passing an invalid type of argument as target', function () {
+  expect(function () {
+    filtero(null, function () {})
+  }).toThrowError()
+})
+
+test('should throw an error when passing an invalid type of argument as filtering rules', function () {
   expect(function () {
     filtero({}, 3)
   }).toThrowError()
