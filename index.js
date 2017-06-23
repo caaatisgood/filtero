@@ -1,10 +1,6 @@
 module.exports = function (obj, rules) {
-  if (!obj || typeof obj !== 'object') {
-    throw new Error('filtero expects an object, e.g. filtero(object, function)')
-  }
-
-  if (typeof rules !== 'function') {
-    throw new Error('filtero expects a filter function, e.g. filtero(object, function)')
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj) || typeof rules !== 'function') {
+    throw new Error('filtero expects an object and a function, e.g. filtero(object, function)')
   }
 
   return Object.keys(obj)
