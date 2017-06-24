@@ -1,4 +1,5 @@
-# filtero [![npm version](https://badge.fury.io/js/filtero.svg)](https://badge.fury.io/js/filtero)
+# filtero
+[![Build Status](https://travis-ci.org/imrobinized/filtero.svg?branch=master)](https://travis-ci.org/imrobinized/filtero) [![npm version](https://badge.fury.io/js/filtero.svg)](https://badge.fury.io/js/filtero)
 
 >Fileter an object by your own rule (function) which received keys and values of the object as parameters. Returns a filtered new object.
 
