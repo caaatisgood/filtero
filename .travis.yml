@@ -6,6 +6,3 @@ node_js:
   - '6'
   - '5'
   - '4'
-skip_commits:
-  files:
-    - '*.md'

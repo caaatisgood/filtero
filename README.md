@@ -26,7 +26,7 @@ The value of `this` provided for the call to `compareFunction`.
 ```javascript
 import filtero from 'filtero'
 
-let obj = {
+const obj = {
   a: 1,
   b: 2,
   c: 3,
