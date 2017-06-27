@@ -1,12 +1,12 @@
-module.exports = function (obj, rules) {
-  if (!obj || typeof obj !== 'object' || Array.isArray(obj) || typeof rules !== 'function') {
+module.exports = function (o, f, ctx) {
+  if (!o || typeof o !== 'object' || Array.isArray(o) || typeof f !== 'function') {
     throw new Error('filtero expects an object and a function, e.g. filtero(object, function)')
   }
 
-  return Object.keys(obj)
-    .reduce(function (res, key) {
-      if (rules(key, obj[key])) {
-        res[key] = obj[key]
+  return Object.keys(o)
+    .reduce(function (res, k) {
+      if (f.call(ctx || this, k, o[k])) {
+        res[k] = o[k]
       }
       return res
     }, {})

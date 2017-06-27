@@ -14,6 +14,23 @@ test('should filter out keys that includes "i"', function () {
   })
 })
 
+test('should filter out keys that has either "foo" or "bar" as its value', function () {
+  var obj = {
+    a: 'foo',
+    b: 'bar',
+    c: 'filtero'
+  }
+  var ctx = {
+    bar: 'bar'
+  }
+  expect(filtero(obj, function (k, v) {
+    return v === 'foo' || v === this.bar
+  }, ctx)).toEqual({
+    a: 'foo',
+    b: 'bar'
+  })
+})
+
 test('should return empty object', function () {
   var obj = {
     filtero: 'filtero'
@@ -38,3 +55,4 @@ test('should throw an error when passing an invalid type of argument as filterin
     filtero({}, 3)
   }).toThrowError()
 })
+
