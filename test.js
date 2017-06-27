@@ -7,8 +7,8 @@ test('should filter out keys that includes "i"', function () {
     filtero: 'filtero'
   }
   expect(filtero(obj, function (k, v) {
-    return k.indexOf('c') === -1
-  })).toMatchObject({
+    return k.indexOf('i') === -1
+  })).toEqual({
     foo: 'foo',
     bar: 'bar'
   })
