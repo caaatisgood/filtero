@@ -10,7 +10,7 @@ npm i filtero -S
 
 ## Syntax
 ```javascript
-filtero(obj, compareFunction)
+filtero(obj, compareFunction [, thisArg])
 ```
 
 ### obj
