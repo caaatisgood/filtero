@@ -20,7 +20,7 @@ Target object to be filtered
 A function that defines the filtering rule. It will have **key** and **value** as parameters while iterating the object. If the function returns a truthy value. The current key/value pair will be reserved in the returning object, and vice versa.
 
 ### thisArg [optional]
-The value of `this` provided for the call to compareFunction.
+The value of `this` provided for the call to `compareFunction`.
 
 ## Usage
 ```javascript
